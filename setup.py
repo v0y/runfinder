@@ -9,7 +9,6 @@ with open(os.path.join(here, 'README.md')) as f:
 
 requires = [
     'pyramid==1.5.1',
-    'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'pyramid_webassets==0.8',
     'SQLAlchemy==0.9.7',
