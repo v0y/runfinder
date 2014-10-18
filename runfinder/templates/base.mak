@@ -28,7 +28,14 @@
             </div>
         </nav>
 
-        <%block name="content" />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <%block name="content" />
+                </div>
+            </div>
+        </div>
+
     </body>
 
 </html>
