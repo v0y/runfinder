@@ -8,6 +8,7 @@ with open(os.path.join(here, 'README.md')) as f:
     README = f.read()
 
 requires = [
+    'deform==0.9.9',
     'pyramid==1.5.1',
     'pyramid_debugtoolbar',
     'pyramid_webassets==0.8',

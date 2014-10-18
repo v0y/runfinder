@@ -1,5 +1,7 @@
 <%inherit file="base.mak"/>
 
 <%block name="content">
-	Hello World!
+    ${search_form.render() | n}
+    <br><br>
+    ${data}
 </%block>
