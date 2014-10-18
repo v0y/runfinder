@@ -10,7 +10,7 @@
         % endfor
 
         % for url in webassets(request, \
-                'bootstrap/dist/js/bootstrap.min.js', 'jquery/dist/jquery.min.js'):
+                'jquery/dist/jquery.min.js', 'bootstrap/dist/js/bootstrap.min.js'):
             <script src="${url}"></script>
         % endfor
     </head>
