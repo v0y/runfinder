@@ -1,12 +1,14 @@
 from deform import Form, ValidationFailure
 from pyramid.view import view_config
 
-from .forms import SearchSchema
+from .forms import SearchSchema, search_at_least_one_validator
 
 
 @view_config(route_name='home', renderer='templates/index.mak')
 def my_view(request):
-    search_form = Form(SearchSchema(), buttons=('submit', ))
+    search_form = Form(
+        SearchSchema(validator=search_at_least_one_validator),
+        buttons=('submit', ))
 
     data = {}
     if 'submit' in request.POST:
