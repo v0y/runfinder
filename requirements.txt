@@ -1,0 +1,7 @@
+deform==0.9.9
+pyramid==1.5.1
+pyramid_debugtoolbar
+pyramid_webassets==0.8
+SQLAlchemy==0.9.7
+waitress
+python-active-com-api
