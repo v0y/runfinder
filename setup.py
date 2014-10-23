@@ -14,7 +14,6 @@ requires = [
     'pyramid_webassets==0.8',
     'SQLAlchemy==0.9.7',
     'waitress',
-    'python-active-com-api'
 ]
 
 setup(
