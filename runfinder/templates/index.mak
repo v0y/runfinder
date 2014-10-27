@@ -3,5 +3,12 @@
 <%block name="content">
     ${search_form.render() | n}
     <br><br>
-    ${data}
+
+    % for event in events['results']:
+
+        ${event}<br>
+        <hr>
+
+    % endfor
+
 </%block>

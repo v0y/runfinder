@@ -8,11 +8,12 @@ with open(os.path.join(here, 'README.md')) as f:
     README = f.read()
 
 requires = [
-    'deform==0.9.9',
+    'deform==2.0a2',
     'pyramid==1.5.1',
     'pyramid_debugtoolbar',
     'pyramid_webassets==0.8',
-    'SQLAlchemy==0.9.7',
+    'python-active-com-api==0.1.4',
+    'SQLAlchemy==0.9.8',
     'waitress',
 ]
 
