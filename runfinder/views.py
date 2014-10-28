@@ -35,6 +35,4 @@ def index(request):
         .topic('running') \
         .get()
 
-    print(response_data['events'])
-
     return response_data
