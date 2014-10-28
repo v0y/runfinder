@@ -33,8 +33,7 @@ def index(request):
         .country(data.get('country')) \
         .city(data.get('city')) \
         .topic('running') \
+        .sort('date_asc') \
         .get()
-
-    print(response_data['events'])
 
     return response_data
