@@ -11,10 +11,12 @@ requires = [
     'deform==2.0a2',
     'pyramid==1.5.1',
     'pyramid_debugtoolbar',
+    'pyramid_tm==0.7',
     'pyramid_webassets==0.8',
     'python-active-com-api==0.1.4',
     'SQLAlchemy==0.9.8',
     'waitress',
+    'zope.sqlalchemy==0.7.5',
 ]
 
 setup(
@@ -40,5 +42,7 @@ setup(
     test_suite="runfinder",
     entry_points=(
         '[paste.app_factory]\n'
-        'main = runfinder:main'
+        'main = runfinder:main\n'
+        '[console_scripts]\n'
+        'initializedb = runfinder.scripts.initializedb:main\n'
     ))

@@ -61,3 +61,5 @@ webassets-external
 
 # secret
 active_com_api_key.py
+
+runfinder.sqlite
