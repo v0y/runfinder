@@ -4,8 +4,8 @@
     ${search_form.render() | n}
     <br>
 
-    % if events:
-        % for event in events['results']:
+    % if page and page.objects_list:
+        % for event in page.objects_list:
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">${event['assetName']}</h3>
@@ -45,6 +45,20 @@
 ##            ${event['assetImages']}
 
         % endfor
+
+        % if page.pageno > 1 or page.has_next:
+            <nav>
+                <ul class="pagination">
+                    % if page.pageno > 1:
+                        <li><a href="${request.current_route_url()}&page=${page.pageno - 1}">&laquo; prev</a></li>
+                    % endif
+                    % if page.has_next:
+                        <li><a href="${request.current_route_url()}&page=${page.pageno + 1}">&raquo; next</a></li>
+                    % endif
+                </ul>
+            </nav>
+        % endif
+
     % endif
 
 </%block>
